@@ -1,0 +1,22 @@
+{
+  "dynamicImports": [],
+  "failurePolicy": "Missing imports, schemas, required config and providers must fail loudly; no optional defaults introduced.",
+  "guiValidationPending": "XML compiler/runtime parity, generation cancellation and voxel/canvas rendering",
+  "legacyLimits": [],
+  "requirements": [
+    "Browser DOM and custom elements",
+    "Project Config View ids, source and view-specific configuration",
+    "Configured runtime plugin/service providers",
+    "Host base/theme semantic CSS"
+  ],
+  "staticImports": {
+    "view.markov": [
+      "/core/runtime.js",
+      "/util/markov-junior/xml-to-mjir.js",
+      "/util/view-canvas-base.js",
+      "/util/vox/grid.js",
+      "/util/voxel-orbit-renderer.js"
+    ]
+  },
+  "supportedHost": "2.0.3"
+}

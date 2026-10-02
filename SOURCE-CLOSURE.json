@@ -1,0 +1,16 @@
+{
+  "hostImports": {
+    "view.markov": [
+      "/core/runtime.js",
+      "/util/markov-junior/xml-to-mjir.js",
+      "/util/view-canvas-base.js",
+      "/util/vox/grid.js",
+      "/util/voxel-orbit-renderer.js"
+    ]
+  },
+  "limits": "Parent must add source-bound LICENSE/NOTICE evidence before distribution.",
+  "transformation": "Blend entries remove only the other registration block; original source retained under upstream/.",
+  "upstream_sha256": {
+    "views/view-markov.js": "34980045bc5e9f88c62eec3367d047ff597ad6ef4cfa890a85eba203d5bc6524"
+  }
+}

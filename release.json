@@ -1,0 +1,26 @@
+{
+  "hostImports": {
+    "view.markov": [
+      "/core/runtime.js",
+      "/util/markov-junior/xml-to-mjir.js",
+      "/util/view-canvas-base.js",
+      "/util/vox/grid.js",
+      "/util/voxel-orbit-renderer.js"
+    ]
+  },
+  "packages": [
+    {
+      "entry": "views/view-markov.js",
+      "files": {
+        "src/view.markov/views/view-markov.js": "views/view-markov.js"
+      },
+      "kind": "view",
+      "name": "view.markov",
+      "sha256": {
+        "src/view.markov/views/view-markov.js": "34980045bc5e9f88c62eec3367d047ff597ad6ef4cfa890a85eba203d5bc6524"
+      },
+      "tag": "view-markov"
+    }
+  ],
+  "repository": "view.markov"
+}
