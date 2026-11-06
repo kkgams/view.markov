@@ -3,3 +3,6 @@ dist/
 __pycache__/
 *.pyc
 .DS_Store
+/build/
+/tools/
+/gams_modules/
