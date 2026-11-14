@@ -1,17 +1,28 @@
 ---
-title: Development
+title: view.markov
 status: reference
 ---
 
 # view.markov
 
-Edit the canonical View JavaScript under `src/`, then run `npm test`.
-`make open` checks the source and opens this repository’s `gams.json` in the
-downloaded released macOS Apple Silicon Host. Required published Units install
-on first startup; network access is required. No sibling checkout is used.
+MarkovJunior XML generation View for [GAMS](https://github.com/kkgams/gams), with canvas and voxel rendering. The local Project opens `local.xml`; generation uses the pinned Project-configured plugin and Host-owned XML compiler/rendering helpers.
 
-Use `make serve-docs DOCS_PORT=8081` for an independent local documentation port,
-`make validate-docs` to validate links, and `make docs` to build the portable
-site under `build/site/`. The engine is justgook/wiki v1.4.0.
-Every push to `release` publishes documentation through GitHub Pages, independently
-of Unit version tags. Select GitHub Actions as the Pages source.
+| View | Source → deployed file | Screenshot | Original work |
+| --- | --- | --- | --- |
+| Markov (`view-markov`) | `src/view.markov/views/view-markov.js` → `views/view-markov.js` | Not available | GAMS authors |
+
+## Development
+
+Requires Make, Node.js, Python 3, curl, zip, unzip and tar. `make open` requires macOS Apple Silicon. Sources load directly; Host helpers and pinned released dependencies in `gams.json` are not bundled.
+
+| Command | Purpose |
+| --- | --- |
+| `make open` | Open local Project in released Host; first launch needs network. |
+| `make check` | Check JavaScript syntax. |
+| `make package` | Build stable-name ZIP and SHA256SUMS under `build.nosync/`. |
+| `make serve-docs` | Preview pinned wiki; `DOCS_PORT=8081` overrides port 8080. |
+| `make docs` | Build portable wiki in `build.nosync/site/`. |
+| `make validate-docs` | Validate wiki links/content. |
+| `make clean` | Remove build output and marked downloads; refuse tracked files, symlinks and supplied tools/Units. |
+
+Existing Host tools are never implicitly updated. Keep macOS security checks intact. GUI verification of XML compiler/runtime parity, generation cancellation and voxel/canvas rendering remains pending.

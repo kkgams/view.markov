@@ -1,8 +1,4 @@
-node_modules/
-dist/
-__pycache__/
-*.pyc
+build.nosync/
+tools/
+gams_modules/
 .DS_Store
-/build/
-/tools/
-/gams_modules/
