@@ -1,8 +1,8 @@
 import { runtime, unwrap } from "/core/runtime.js"
-import { ViewCanvasBase } from "/util/view-canvas-base.js"
-import { VoxelOrbitRenderer } from "/util/voxel-orbit-renderer.js"
-import { paletteFromSymbolColors, voxelRenderDataFromIndexedGrid } from "/util/vox/grid.js"
 import { compileXmlToMjir, initialGridFromXml, xmlAttr, xmlRootStartTag } from "/util/markov-junior/xml-to-mjir.js"
+import { ViewCanvasBase } from "/util/view-canvas-base.js"
+import { paletteFromSymbolColors, voxelRenderDataFromIndexedGrid } from "/util/vox/grid.js"
+import { VoxelOrbitRenderer } from "/util/voxel-orbit-renderer.js"
 
 const PALETTE = {
     // Uppercase A–Z
@@ -574,7 +574,7 @@ export class ViewMarkov extends ViewCanvasBase {
                 attributes: { "data-source": path, "data-lang": "xml" },
             }),
         )
-        if (payload && payload.reload) await this.reload()
+        if (payload?.reload) await this.reload()
     }
 
     async compileToMjirJson() {
@@ -617,7 +617,7 @@ export class ViewMarkov extends ViewCanvasBase {
         )
         if (!payload || payload.cancelled) return
         const selection = Array.isArray(payload.selection) ? payload.selection[0] : payload.selection
-        assert(selection && selection.path, "view-markov load input requires selected tilemap file path")
+        assert(selection?.path, "view-markov load input requires selected tilemap file path")
         await this.loadTilemapInputPath(String(selection.path).trim())
     }
 
