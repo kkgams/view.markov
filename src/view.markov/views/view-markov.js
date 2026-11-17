@@ -858,7 +858,7 @@ export class ViewMarkov extends ViewCanvasBase {
         return {
             folder,
             depth: example.depth,
-            loadRulePattern: (file, legend, requestedFolder = "") => {
+            loadRulePattern: (file, _legend, requestedFolder = "") => {
                 const key = `${requestedFolder}\0${file}`
                 const pattern = rulePatterns.get(key)
                 if (pattern) return pattern
