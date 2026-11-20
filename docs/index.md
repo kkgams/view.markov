@@ -6,6 +6,7 @@ status: reference
 # view.markov
 
 MarkovJunior XML generation View for [GAMS](https://github.com/kkgams/gams), with canvas and voxel rendering. The local Project opens `local.xml`; generation uses the pinned Project-configured plugin and Host-owned XML compiler/rendering helpers.
+[Launch fresh MarkovJunior demo](https://gams.z0.lv/app.html?showcase=https%3A%2F%2Fgithub.com%2Fkkgams%2Fshowcases%2Freleases%2Fdownload%2Fv0.3.0%2Fmarkov.zip). Click Step to grow the island, then change the seed and compare.
 
 | View | Source → deployed file | Screenshot | Original work |
 | --- | --- | --- | --- |
